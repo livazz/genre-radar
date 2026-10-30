@@ -27,7 +27,7 @@
         datasets.set(id, { status: 'ok', data: rows, columns: rows.columns });
         schedule();
       })
-      .catch((e) => { datasets.set(id, { status: 'error', data: [], message: String(e) }); schedule(); });
+      .catch((e) => { console.error('Genre Radar: could not load ' + id, e); datasets.set(id, { status: 'error', data: [], message: String(e.message || e) }); schedule(); });
   }
 
   function data(id) {
@@ -106,6 +106,8 @@
     resetParams() { params = Object.assign({}, defaults); schedule(); },
     setLink(name) { try { history.replaceState(null, '', '#' + name); } catch (e) { /* lien non mis à jour */ } },
     refresh() { schedule(); },
+    // Recharger une source qui a échoué.
+    retry(id) { datasets.delete(id); for (const c of calcs.values()) c.cacheKey = null; schedule(); },
     colors: ['#3b82f6', '#22a35a', '#8b5cf6', '#eab308', '#f97316', '#e11d48', '#14b8a6', '#94a3b8'],
   };
 
