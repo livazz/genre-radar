@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genre Radar</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>window.GENRE_RADAR_LOCK = {"salt": "26s97NVXByGc2moxdQ7MrQ==", "iterations": 600000};</script>
+<script src="lock.js" defer></script>
+</head>
+<body>
+<form class="site-lock" id="site-lock" hidden>
+  <h1>Genre Radar</h1>
+  <p>This site is private. Enter the password to open it.</p>
+  <input type="text" name="username" value="genre-radar" autocomplete="username" hidden>
+  <label class="site-lock-field"><span>Password</span>
+    <input type="password" name="password" autocomplete="current-password" required></label>
+  <label class="site-lock-remember"><input type="checkbox" name="remember"> Remember on this device</label>
+  <button type="submit">Open</button>
+  <p class="site-lock-status" role="status" aria-live="polite"></p>
+</form>
+<div id="dash-root"></div>
+</body>
+</html>

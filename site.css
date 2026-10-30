@@ -1,0 +1,72 @@
+/* Genre Radar, version site autonome : les couleurs, espacements et polices que le moteur de tableaux de
+   bord de Claude fournissait, en clair et en sombre. */
+:root {
+  --color-fg: #1c1f24; --color-fg-muted: #5c6470; --color-bg: #f6f7f9; --color-panel: #ffffff;
+  --color-border-line: #e2e5ea; --color-ok: #15803d; --color-warn: #b45309; --color-bad: #be123c;
+  --cds-chart-grid: #eceef2; --cds-chart-axis: #c9ced6; --cds-chart-reference: #8a919c; --cds-chart-muted: #b8bfca;
+  --cds-surface-popover: #ffffff; --cds-border: #d7dbe1; --cds-shadow-popover: 0 8px 24px rgba(20, 24, 31, .14);
+  --cds-text-secondary: #5c6470;
+  --font-anthropic-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-anthropic-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --cds-font-size-caption: 0.8125rem; --cds-font-size-body: 0.9375rem; --cds-font-size-heading: 1.0625rem;
+  --cds-font-size-title: 1.75rem; --cds-font-weight-medium: 600;
+  --cds-gap-xs: 0.25rem; --cds-gap-sm: 0.5rem; --cds-gap-md: 0.875rem; --cds-gap-lg: 1.375rem; --cds-gap-xl: 2rem;
+  --cds-pad-xs: 0.25rem; --cds-pad-sm: 0.5rem; --cds-pad-md: 0.75rem; --cds-pad-lg: 1.125rem; --cds-pad-xl: 1.75rem;
+  --cds-radius: 8px; --cds-dur-slow: 240ms; --cds-ease-out: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fg: #e8eaee; --color-fg-muted: #9aa3b0; --color-bg: #121418; --color-panel: #1b1e24;
+    --color-border-line: #2c313a; --color-ok: #4ade80; --color-warn: #fbbf24; --color-bad: #fb7185;
+    --cds-chart-grid: #262a32; --cds-chart-axis: #3b414c; --cds-chart-reference: #8d95a1; --cds-chart-muted: #5b6370;
+    --cds-surface-popover: #22262d; --cds-border: #353b45; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .5);
+    --cds-text-secondary: #9aa3b0;
+    color-scheme: dark;
+  }
+}
+html, body { margin: 0; }
+body {
+  background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans);
+  font-size: var(--cds-font-size-body); line-height: 1.4;
+}
+#dash-root {
+  padding-block: 1.5rem 3rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.dash-skeleton { position: relative; }
+.dash-skeleton::after {
+  content: ""; position: absolute; inset: 0; border-radius: var(--cds-radius);
+  background: linear-gradient(90deg, var(--color-border-line), var(--color-panel), var(--color-border-line));
+  background-size: 200% 100%; opacity: .6;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dash-skeleton::after { animation: shimmer 1.4s linear infinite; }
+  @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+}
+.site-files { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; }
+.site-files span { color: var(--color-fg-muted); }
+
+/* Écran du mot de passe (version en ligne). */
+.site-lock {
+  box-sizing: border-box; width: min(22rem, calc(100% - 32px)); margin: 18vh auto 0; padding: var(--cds-pad-xl);
+  display: flex; flex-direction: column; gap: var(--cds-gap-md);
+  background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius);
+}
+.site-lock[hidden] { display: none; }
+.site-lock h1 { margin: 0; font-size: var(--cds-font-size-title); font-family: var(--font-anthropic-serif); }
+.site-lock p { margin: 0; color: var(--color-fg-muted); }
+.site-lock-field { display: flex; flex-direction: column; gap: var(--cds-gap-xs); font-weight: var(--cds-font-weight-medium); }
+.site-lock input[type="password"] {
+  font: inherit; font-size: 1rem; padding: var(--cds-pad-sm) var(--cds-pad-md);
+  border: 1px solid var(--cds-border); border-radius: 6px; background: var(--color-bg); color: var(--color-fg);
+}
+.site-lock-remember { display: flex; gap: var(--cds-gap-sm); align-items: center; color: var(--color-fg-muted); }
+.site-lock button {
+  font: inherit; font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-sm) var(--cds-pad-md);
+  border: 0; border-radius: 6px; background: var(--color-fg); color: var(--color-panel); cursor: pointer;
+}
+.site-lock button:disabled { opacity: .6; cursor: progress; }
+.site-lock-status:empty { display: none; }
+.site-lock-status.is-error { color: var(--color-bad); }
