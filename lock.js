@@ -29,7 +29,9 @@
   }
 
   async function open(keys, file) {
-    const r = await fetch(file);
+    // no-cache : le navigateur redemande si le fichier a changé (réponse courte s'il n'a pas changé), sinon
+    // GitHub Pages laisse servir l'ancienne version jusqu'à 10 minutes après une mise à jour.
+    const r = await fetch(file, { cache: 'no-cache' });
     if (!r.ok) throw new Error(r.status + ' ' + r.statusText);
     const buf = new Uint8Array(await r.arrayBuffer());
     const end = buf.length - 32;
