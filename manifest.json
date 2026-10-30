@@ -21,15 +21,17 @@
 "data/projections.bin": "d7d3e827c10540daffc7fc50b778f78930ed0f07f276f439fb6ebbe84812e5bd",
 "data/projection_years.bin": "fb79ee55cd332556fc4b2ea5e0b5ed0d9650a03a3b8349b74483bcda1197545f",
 "data/projection_total.bin": "60982fcf570be872c5b3485f87fadb4a982fe5a02634b66772a610a11b0e0c54",
-"data/projection_accuracy.bin": "0a5733958a7ea36d7a2a9b2d23a74dbce07b53b18fba6d4b782dc018d5477fa6",
-"data/projection_meta.bin": "ff92c8e8fef4d9524d7f74439a8ed4244fd7d271dcb83246995c6050f2cd0b0e",
+"data/projection_accuracy.bin": "6ccd6212697617e36a6d88b72deba336619677bc04b5674cf9e6d641886182d8",
+"data/projection_meta.bin": "37f72499398e62eedfc8aed157699880bebc5fdc6ddea2d049b45444ce68aeb9",
 "data/patterns.bin": "e5b2458d5e766824815ceff3e2f4e46529abde47387f7b0c185a45a4501aa498",
 "data/pattern_events.bin": "788b9a732116f10bdfa51ef35f1f6774cf1b0bc011b76e885c96964246f0bd6b",
 "data/pair_projections.bin": "ea535c3aa2ba7c90abcf48212fddfd44947eb14da900c858b9db4f3f7ec1738c",
+"data/style_pairs.bin": "1f58c1295e3ea294550138a67a39dc9c0b4549e9ae426f1cf033ced0677b8301",
+"data/style_trios.bin": "0b6f2bd6e83124816cfb1b04d17c7872b163aa2b95e48ce3d0bb342358d330ca",
 "data/verifications.bin": "aa69f850a0085ffeee80ddb900237cda857622d7af17d83485d6568fc0c27400",
 "data/chiffres.bin": "e69a9ec9fcbd8f87daa7d744246dbc87d1074297274683b0d78dd9679ccb3b86",
 "data/reperes.bin": "1540f5163a9c88236d1a69ee45708c17d88c9606dfa16a505f9c1f2cea77da95",
 "data/coverage_refs.bin": "0142ec5754ac656b87dde5446a637550d1a53da48788fb73f02eff784fa08906",
-"app.bin": "22b468fd0e94280c8ff48cb0604c9d15d0f9bb57daf52b9b3264da8b192ea8c8"
+"app.bin": "baf9d243b1b03da759d45a80936533d7ab18df333b0cb728ace6e06e7bc334fd"
 }
 }
