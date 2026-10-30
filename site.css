@@ -1,12 +1,12 @@
 /* Genre Radar, version site autonome : les couleurs, espacements et polices que le moteur de tableaux de
    bord de Claude fournissait, en clair et en sombre. */
 :root {
-  --color-fg: #1c1f24; --color-fg-muted: #5c6470; --color-bg: #f6f7f9; --color-panel: #ffffff;
+  --color-fg: #101418; --color-fg-muted: #555e6b; --color-bg: #eef0f3; --color-panel: #ffffff;
   --color-border-line: #e2e5ea; --color-ok: #15803d; --color-warn: #b45309; --color-bad: #be123c;
   --cds-chart-grid: #eceef2; --cds-chart-axis: #c9ced6; --cds-chart-reference: #8a919c; --cds-chart-muted: #b8bfca;
   --cds-surface-popover: #ffffff; --cds-border: #d7dbe1; --cds-shadow-popover: 0 8px 24px rgba(20, 24, 31, .14);
   --cds-text-secondary: #5c6470;
-  --font-anthropic-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-anthropic-sans: "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-anthropic-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --cds-font-size-caption: 0.8125rem; --cds-font-size-body: 0.9375rem; --cds-font-size-heading: 1.0625rem;
   --cds-font-size-title: 1.75rem; --cds-font-weight-medium: 600;
@@ -17,7 +17,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-fg: #e8eaee; --color-fg-muted: #9aa3b0; --color-bg: #121418; --color-panel: #1b1e24;
+    --color-fg: #eef1f5; --color-fg-muted: #a1aab7; --color-bg: #0e1116; --color-panel: #171b22;
     --color-border-line: #2c313a; --color-ok: #4ade80; --color-warn: #fbbf24; --color-bad: #fb7185;
     --cds-chart-grid: #262a32; --cds-chart-axis: #3b414c; --cds-chart-reference: #8d95a1; --cds-chart-muted: #5b6370;
     --cds-surface-popover: #22262d; --cds-border: #353b45; --cds-shadow-popover: 0 8px 24px rgba(0, 0, 0, .5);
